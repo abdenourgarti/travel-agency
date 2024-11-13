@@ -7,6 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 15px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -287,8 +288,118 @@ footer .copyright {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        width: 100%;
+    }
     .wrapper {
         width: 100%;
+        padding: 0 10px;
+        }
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapper h1 {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 120px;
+        right: 10px;
+        width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+    }
+
+    header nav ul li {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    header nav.active ul {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+
+    #main-image h2 {
+        font-size: 25px;
+    }
+
+    #steps ul li {
+        float: none;
+        margin: 20px auto;
+    }
+
+    #steps ul li {
+        flex: 0 0 100%;
+    }
+
+    
+
+    #possibilities .wrapper {
+        gap: 20px;
+    }
+
+    #possibilities article{
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    #contact h3 {
+        width: 100%;
+    }
+
+    #contact p{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    #contact label,
+    #contact input[type="text"] {
+        text-align: left;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    #contact input[type="submit"] {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+}
+/*@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapper h1{
+        font-size: 25px;
     }
 
     header nav ul {
@@ -318,6 +429,10 @@ footer .copyright {
         margin-right: 50px;
     }
 
+    #main-image h2{
+        font-size: 25px;
+    }
+
     #steps ul li {
         float: none;
         margin: 20px auto;
@@ -325,6 +440,7 @@ footer .copyright {
 
     #possibilities article{
         margin-bottom: 20px;
+        width: 90%;
     }
 
     #contact form {
@@ -344,6 +460,9 @@ footer .copyright {
     #contact input[type="submit"] {
         margin-top: 10px;
         text-align: center;
+    }
+    .copyright{
+        font-size: 10px;
     }
 }
 /*hello*/
